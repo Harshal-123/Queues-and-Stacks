@@ -1,0 +1,28 @@
+class Stack:
+  def __init__(self, lst):
+    self.lst = lst
+
+  def push(self, x):
+    self.lst.append(x)
+  
+  def pop(self):
+
+    lst_len = len(self.lst)
+    if lst_len > 0:
+      y = self.lst[lst_len - 1]
+      self.lst = self.lst[:lst_len - 1]
+      return y
+
+
+Stack_Test = Stack([4,7,8,3,1])
+
+
+Stack_Test.push(9)
+
+print(Stack_Test.lst)
+
+assert(Stack_Test.lst[5] is not 10)
+
+print(Stack_Test.pop())
+
+print(Stack_Test.lst)
