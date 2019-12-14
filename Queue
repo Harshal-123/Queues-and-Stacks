@@ -1,0 +1,23 @@
+class Queue:
+  def __init__(self, lst):
+    self.lst = lst
+
+  def append(self, x):
+    self.lst.append(x)
+  
+  def pop(self):
+    y = self.lst[0]
+    self.lst = self.lst[1:]
+    return y
+
+Queue_Test = Queue([4,7,8,3,1])
+
+Queue_Test.append(9)
+
+print(Queue_Test.lst)
+
+assert(Queue_Test.lst[5] is not 10)
+
+print(Queue_Test.pop())
+
+print(Queue_Test.lst)
